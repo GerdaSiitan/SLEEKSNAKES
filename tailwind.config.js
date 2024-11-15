@@ -6,7 +6,12 @@ export default {
       colors: {
         'primary': '#0F0E20',
         'secondary': '#004236',
+        'accent': '#23B930',
       },
+      fontFamily: {
+        'body': ['"Roboto"'],
+        'display': ['"Sporten"']
+      }
     },
   },
   plugins: [],
