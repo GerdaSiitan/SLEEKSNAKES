@@ -44,7 +44,7 @@ const webpackConfig = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.njk'
+            template: './src/pages/index.njk'
         }),
     ],
 }
