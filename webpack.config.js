@@ -2,6 +2,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { watchFile } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,7 +18,7 @@ const webpackConfig = {
         static: {
             directory: path.resolve(__dirname, 'public')
         },
-        historyApiFallback: true,
+        watchFiles: ['src/**/*'],
         open: true,
         port: 9000,
         compress: true,
@@ -26,7 +27,7 @@ const webpackConfig = {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader','css-loader']
+                use: ['style-loader','css-loader', 'postcss-loader']
             },
             {
                 test: /\.njk$/i,
