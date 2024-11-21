@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { watchFile } from 'fs';
+import { type } from 'os';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,6 +40,10 @@ const webpackConfig = {
                 generator: {
                     filename: '[name][ext]'
                 }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
             },
         ]
     },

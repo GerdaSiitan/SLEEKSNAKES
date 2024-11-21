@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    @font-face {
-      font-family: 'Sporten';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      public: url('../public/Sporten.woff') format('woff');
-    }
-  }
+@font-face {
+  font-family: 'Sporten Personal Use';
+  src: url('/public/SportenPersonalUse.woff2') format('woff2'),
+      url('/public/SportenPersonalUse.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/public/Roboto-Medium.woff2') format('woff2'),
+      url('/public/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+

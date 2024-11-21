@@ -9,8 +9,8 @@ export default {
         'accent': '#23B930',
       },
       fontFamily: {
-        'body': ['"Roboto"'],
-        'display': ['"Sporten"']
+        'primary': ['Sporten Personal Use'],
+        'secondary': ['Roboto']
       }
     },
   },
