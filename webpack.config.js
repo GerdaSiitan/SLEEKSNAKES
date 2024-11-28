@@ -51,6 +51,19 @@ const webpackConfig = {
         new HtmlWebpackPlugin({
             template: './src/pages/index.njk'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/merch.njk',
+            filename: 'merch.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/contact.njk',
+            filename: 'contact.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            template: './src/pages/merchdetail.njk',
+            filename: 'merchdetail.html'
+        }),
     ],
 }
 
