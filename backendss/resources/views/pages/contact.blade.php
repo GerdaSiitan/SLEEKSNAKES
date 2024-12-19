@@ -9,7 +9,8 @@
     </h1>
 <div class="flex flex-col items-center px-20 pb-96 rounded-none max-md:px-5 max-md:pb-24">
   <div class="flex flex-col items-center w-[450px] md:max-w-full md:w-[1180px] mt-14">
-    <form class="flex flex-col items-start self-stretch w-full">
+    <form class="flex flex-col items-start self-stretch w-full" action="{{route('mail')}}" method="POST" >
+        @csrf
       <div class="flex flex-col items-start self-stretch pl-1.5 text-xl md:text-2xl text-white max-md:max-w-full">
         <label for="nameInput" class="ml-3 max-md:ml-2.5">NAME</label>
         <input

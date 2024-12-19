@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactUs;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
 {
@@ -23,5 +25,10 @@ class PublicController extends Controller
     public function merchdetail(Product $product){
         return view ('pages.merchdetail', compact('product'));
 
+    }
+
+    public function mail(){
+        Mail::to('gerda.siitan@gmaill.com')->send(new ContactUs());
+        return redirect()->back();
     }
 }
